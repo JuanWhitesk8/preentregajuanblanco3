@@ -1,0 +1,163 @@
+$primary: #800080;
+$color-text: white;
+
+@import "bootstrap";
+@import "media";
+@import "mixin";
+@import "mixinform";
+
+
+header {
+    background-color: black;
+    h1 {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        
+        &:hover{
+            color: purple;
+        }
+    }
+    nav {
+        box-shadow: 0px 1px purple inset;
+    }
+}.altura {
+    height: 40px;
+}
+
+.color-font {
+    color: $color-text;
+}
+
+.margin {
+    img {
+        object-fit: cover;
+        height: 300px;
+        width: 400px;
+    }
+    h3 {
+        padding-top: 20px;
+    }
+    p {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+ }
+
+ .bg-color {
+    background-color: black;
+ }
+
+
+ footer {
+    margin-top: 20px;
+    color: $color-text;
+    background-color: purple;
+
+
+    .logo--footer {
+        width: 100px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        a {
+            text-decoration: none;
+            color: $color-text;
+            margin: 10px;
+
+            &:hover{ 
+                color: black;
+            }
+        }
+    }
+
+    img {
+        padding: 0;
+        margin: auto;
+    }
+}
+
+/*---------style banner ---------*/
+
+.banner-index {
+    margin-top: 100px;
+}
+
+/*----------Style services, prendas & nosotros ----------*/
+.section-services {
+    color: $color-text;
+    margin-top: 300px;
+
+    h1 {
+        color: #800080;
+
+    }
+
+    img {
+        @include imgservices();
+    }
+
+}
+
+.section-nosotros {
+
+    color: $color-text;
+    margin-top: 300px;
+    margin-bottom: 300px;
+
+    h1 {
+        color: #800080;
+
+    }
+
+    img {
+        @include imgservices();
+    }
+}
+
+/*------------styles form-----------*/
+
+.margen-top {
+    margin-top: 250px;
+    color: $color-text;
+}
+
+
+
+.container__form {
+	display: flex;
+	justify-content: space-around;
+	width: 650px;
+	.form {
+		.form-label {
+			display: block;
+			position: relative;
+			padding: 10px 10px;
+		}
+        
+	}
+}
+.form-input {
+	@include formstyles();
+}
+.form-texarea {
+	@include formstyles();
+}
+.btn-submit {
+	width: 100%;
+	outline: none;
+	background-color: purple;
+	border: none;
+	padding: 15px 0;
+	cursor: pointer;
+	color: $color-text;
+	transition: all .5s ease;
+	&:hover {
+		background-color: rgb(252, 9, 252);
+	}
+}
